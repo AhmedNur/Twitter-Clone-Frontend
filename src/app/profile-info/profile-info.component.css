@@ -1,0 +1,87 @@
+.header-photo{
+  width: 600px;
+  height: 200px;
+}
+.info-container{
+  box-sizing: border-box;
+  width: 600px;
+  display:flex;
+  flex-direction: column;
+  padding: 0 15px;
+  border-bottom: 1px solid #e6ecf0;
+}
+.picture-and-btn{
+  display:flex;
+  height: 60px;
+}
+.profile-picture-container{
+  position: relative;
+  bottom: 85px;
+  left: 10px;
+  width: fit-content;
+}
+.profile-picture{
+  border-radius: 9999px;
+  border: 5px solid white;
+  height: 135px;
+  width: 135px;
+}
+.btn-container{
+  flex-grow: 1;
+  margin-top: 10px;
+}
+.btn{
+  transition: background-color 0.2s;
+  float: right;
+  height: fit-content;
+  cursor: pointer;
+  border-radius:100px;
+  font-weight:800;
+  font-size:15px;
+  text-align: center;
+  padding: 7px 13px;
+  outline: none;
+}
+.btn-outlined{
+  border: 1px solid #1da1f2;
+  background-color:#fff;
+  color:#1da1f2;
+}
+.btn-outlined:hover{
+  background-color:#eaf5fd;
+  transition: background-color 0.2s;
+}
+.btn-filled{
+  border:none;
+  background-color: #1da1f2;
+  color: #fff;
+}
+.btn-filled:hover{
+  background-color: #e0245e;
+}
+.name-container{
+  display:flex;
+  flex-direction:column;
+  color:#14171a;
+}
+.display-name{
+  color:inherit;
+  font-weight:900;
+  font-size: 18px;
+}
+.tag{
+  color:#657786;
+}
+.bio-container{
+  margin-top: 10px;
+}
+.follow-counters{
+  margin: 10px 0;
+  display:flex;
+}
+.following{
+  margin-right: 20px;
+}
+.text-bold{
+  font-weight:bold;
+}

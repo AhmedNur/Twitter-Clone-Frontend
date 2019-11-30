@@ -120,6 +120,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "Twitter-Clone-Frontend"
 }

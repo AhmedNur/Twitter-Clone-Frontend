@@ -1,0 +1,33 @@
+<app-profile-editor-modal *ngIf="this.modalService.profileEditorModalOpen"></app-profile-editor-modal>
+<div class="header-photo">
+  <img src="https://via.placeholder.com/600x200">
+</div>
+<div *ngIf="this.user" class="info-container">
+  <div class="picture-and-btn">
+    <div class="profile-picture-container">
+      <img class="profile-picture" src="https://abs.twimg.com/sticky/default_profile_images/default_profile.png">
+    </div>
+    <div class="btn-container">
+      <button *ngIf="this.tag == this.auth.userDetails.getValue().tag" (click)="openProfileEditor()" class="btn btn-outlined">Edit Profile</button>
+      <button *ngIf="!(this.tag == this.auth.userDetails.getValue().tag) && !(this.auth.userDetails.getValue().followed.includes(this.user.id))"
+              (click)="follow()" class="btn btn-outlined">Follow</button>
+      <button *ngIf="!(this.tag == this.auth.userDetails.getValue().tag) && this.auth.userDetails.getValue().followed.includes(this.user.id)"
+              (click)="unfollow()" (mouseenter)="onHover($event)" (mouseleave)="releaseHover($event)" class="btn btn-filled">Following</button>
+    </div>
+  </div>
+  <div *ngIf="!(this.tag == this.auth.userDetails.getValue().tag)" class="name-container">
+    <div class="display-name"><span>{{this.user.displayName}}</span></div>
+    <div class="tag"><span>@{{this.user.tag}}</span></div>
+  </div>
+  <div *ngIf="!(this.tag == this.auth.userDetails.getValue().tag)" class="bio-container"><span>{{this.user.bio}}</span></div>
+  <div *ngIf="this.tag == this.auth.userDetails.getValue().tag" class="name-container">
+    <div class="display-name"><span>{{this.auth.userDetails.getValue().displayName}}</span></div>
+    <div class="tag"><span>@{{this.auth.userDetails.getValue().tag}}</span></div>
+  </div>
+  <div *ngIf="this.tag == this.auth.userDetails.getValue().tag" class="bio-container"><span>{{this.auth.userDetails.getValue().bio}}</span></div>
+  <div class="follow-counters">
+    <div class="following"><span class="text-bold">{{this.user.followedText}}</span>&nbsp;Following</div>
+    <div class="followers"><span class="text-bold">{{this.user.followersText}}</span>&nbsp;Followers</div>
+  </div>
+</div>
+<app-timeline *ngIf="this.tag" [tag]="this.tag"></app-timeline>

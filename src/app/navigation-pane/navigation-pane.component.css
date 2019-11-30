@@ -1,0 +1,66 @@
+.nav-container{
+  width:100%;
+}
+.navigation{
+  float:right;
+  width:275px;
+  box-sizing:border-box;
+  padding:0 20px;
+  display:flex;
+  flex-direction:column;
+}
+.nav-item{
+  padding: 7px 0;
+  color: #000;
+}
+.nav-item-active, .nav-btn:hover{
+  color:#1da1f2;
+}
+.nav-btn{
+  outline: none;
+  border:none;
+  transition-property:background-color, color;
+  transition-duration: 0.2s;
+  display:inline-block;
+  border-radius: 9999px;
+  background-color: #fff;
+  padding:10px;
+  font-size:18px;
+  font-weight:bold;
+  color:inherit;
+}
+.nav-btn:hover{
+  background-color: rgba(29, 161, 242, 0.1);
+}
+.nav-btn-text{
+  margin:20px;
+}
+.tweet-btn{
+  background-color:#1da1f2;
+  color:#fff;
+  font-size:16px;
+  height:49px;
+  padding:0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  border: none;
+  outline: none;
+}
+.tweet-btn:hover{
+  background-color:rgb(26, 145, 218);
+  color:#fff;
+  cursor: pointer;
+}
+.fas{
+  font-size:24px;
+}
+.logo{
+  height:47px;
+  width:47px;
+  padding:0;
+}
+.twitter-icon-small{
+  height:47px;
+}

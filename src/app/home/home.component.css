@@ -1,0 +1,15 @@
+.main-header{
+  font-size: 20px;
+  font-weight: 900;
+  font-family:inherit;
+  height:53px;
+  display:flex;
+  align-items:center;
+  padding-left:15px;
+  border-bottom: 1px solid #e6ecf0;
+}
+#tweet-editor-spacer{
+  width: auto;
+  height: 10px;
+  background-color: rgb(230, 236, 240);
+}

@@ -1,0 +1,3 @@
+<app-header [hasBackButton]="true" [headerText]="'Tweet'"></app-header>
+<app-tweet-lg *ngIf="parentTweet" [tweet]="parentTweet"></app-tweet-lg>
+<app-timeline *ngIf="replies" [tweets]="replies"></app-timeline>

@@ -1,0 +1,17 @@
+#modal-bg{
+  position:fixed;
+  top:0;
+  left:0;
+  height:100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  display:flex;
+  justify-content: center;
+  z-index: 3;
+}
+#tweet-editor-container{
+  margin-top: 75px;
+  border-radius: 10px;
+  overflow: hidden;
+  height: fit-content;
+}
