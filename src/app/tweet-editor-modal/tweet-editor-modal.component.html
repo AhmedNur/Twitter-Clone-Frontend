@@ -1,0 +1,6 @@
+<div id="modal-bg" (click)="clickedOut($event)">
+  <div id="tweet-editor-container" (click)="clickedIn($event)">
+    <app-tweet-editor *ngIf="!(modalService.editorModalForReply)" [inModal]="true"></app-tweet-editor>
+    <app-tweet-editor *ngIf="modalService.editorModalForReply" [inModal]="true" [replying]="true"></app-tweet-editor>
+  </div>
+</div>

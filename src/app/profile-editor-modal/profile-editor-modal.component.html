@@ -1,0 +1,23 @@
+<div (click)="clickedOut()" class="modal-container">
+  <div (click)="clickedIn($event)" class="profile-editor-modal">
+    <div class="modal-header">
+      <button class="close-btn" (click)="clickedOut()">X</button>
+      <span>Edit profile</span>
+      <div class="save-btn-container">
+        <button *ngIf="inRegistration" (click)="save()" class="btn-filled">Register</button>
+        <button *ngIf="!(inRegistration)" (click)="save()" class="btn-filled">Save</button>
+      </div>
+    </div>
+    <div class="profile-editor" [formGroup]="formGroup">
+      <p *ngIf="this.auth.usernameTaken" class="error">Username is taken</p>
+      <div *ngIf="inRegistration" class="editor-input-container"><span class="editor-input-label">Username</span><input formControlName="username" name="username" placeholder="Username" class="editor-input"></div>
+      <div *ngIf="inRegistration" class="editor-input-container"><span class="editor-input-label">Password</span><input formControlName="password" name="password" placeholder="Password" type="password" class="editor-input"></div>
+      <div *ngIf="inRegistration" class="editor-input-container"><span class="editor-input-label">Name</span><input formControlName="displayName" name="display-name" placeholder="Display name" class="editor-input"></div>
+      <div *ngIf="!(inRegistration)" class="editor-input-container"><span class="editor-input-label">Name</span><input formControlName="displayName" name="display-name" placeholder="Change your name" class="editor-input"></div>
+      <p *ngIf="this.auth.tagTaken" class="error">Tag is taken</p>
+      <div *ngIf="!(inRegistration)" class="editor-input-container"><span class="editor-input-label">Tag</span><input formControlName="tag" name="tag" placeholder="Change your tag" class="editor-input"></div>
+      <div *ngIf="inRegistration" class="editor-input-container"><span class="editor-input-label">Tag</span><input formControlName="tag" name="tag" placeholder="Tag" class="editor-input"></div>
+      <div *ngIf="!(inRegistration)" class="editor-input-container"><span class="editor-input-label">Bio</span><input formControlName="bio" name="bio" placeholder="Change your bio" class="editor-input"></div>
+    </div>
+  </div>
+</div>

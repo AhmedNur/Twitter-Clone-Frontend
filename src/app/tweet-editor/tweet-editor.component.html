@@ -1,0 +1,12 @@
+<div class="tweet-editor">
+  <div class="profile-picture-container">
+    <a href="#">
+      <img src="https://twitter.ahmednur.me/default_profile.png" class="profile-picture">
+    </a>
+  </div>
+  <div class="tweet-editor-content" [formGroup]="formGroup">
+    <div *ngIf="inModal" class="close-btn-container"><button (click)="closeModal()" class="close-btn">X</button></div>
+    <textarea id="tweet-editor-text-field" formControlName="tweetContent" class="tweet-editor-text-field" (input)="increaseTextAreaHeightAndCheckTweetLength()" placeholder="What's happening?" name="tweetContent"></textarea>
+    <div class="tweet-editor-toolbar"><div class="toolbar-item"><button (click)="createTweet()" class="tweet-btn">Tweet</button></div></div>
+  </div>
+</div>

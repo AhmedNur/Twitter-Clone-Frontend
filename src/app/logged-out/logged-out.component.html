@@ -1,0 +1,75 @@
+<div class="logged-out-homepage">
+  <div class="logged-out-homepage-content-container">
+    <div class="eyecandy logged-out-homepage-section">
+      <svg class="twitterIcon-bird" viewBox="0 0 1208 982" version="1.1" xmlns="http://www.w3.org/2000/svg"
+           xmlns:xlink="http://www.w3.org/1999/xlink">
+        <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+        <title>bird</title>
+        <desc>Created with Sketch.</desc>
+        <defs></defs>
+        <g id="Final-Horizon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="Artboard" transform="translate(-286.000000, -117.000000)" fill-rule="nonzero" fill="#1B95E0">
+            <path
+              d="M1493.75308,233.195911 C1449.31783,252.922544 1401.56126,266.207828 1351.43951,272.19627 C1402.61804,241.549536 1441.92034,192.987798 1460.3889,135.116296 C1412.53168,163.498493 1359.49119,184.130942 1303.02874,195.252335 C1257.88897,147.093181 1193.42514,117 1122.16771,117 C962.190754,117 844.636121,266.258151 880.768067,421.202806 C674.896491,410.886582 492.324484,312.253414 370.089808,162.341063 C305.17308,273.705962 336.423691,419.391176 446.731805,493.16476 C406.171431,491.856361 367.925917,480.734968 334.561738,462.165765 C331.844294,576.95263 414.122472,684.342008 533.287442,708.245454 C498.413572,717.706186 460.218381,719.9204 421.368991,712.47259 C452.871217,810.904465 544.358512,882.514158 652.854997,884.52708 C548.686294,966.201382 417.443793,1002.68559 286,987.186091 C395.653915,1057.48739 525.940278,1098.50067 665.838342,1098.50067 C1125.89162,1098.50067 1385.81015,709.956437 1370.10936,361.469352 C1418.52012,326.494836 1460.53987,282.864756 1493.75308,233.195911 Z"
+              id="bird"></path>
+          </g>
+        </g>
+      </svg>
+      <div>
+        <div class="eyecandy-item">
+          <i class="fas fa-search icon"></i>
+          Follow your interests.
+        </div>
+        <div class="eyecandy-item">
+          <i class="fas fa-user-friends icon"></i>
+          Hear what people are talking about.
+        </div>
+        <div class="eyecandy-item">
+          <i class="far fa-comment icon"></i>
+          Join the conversation.
+        </div>
+      </div>
+    </div>
+    <div class="logged-out-homepage-section">
+      <div class="login-form-container">
+        <span *ngIf="this.authService.badCredentials" class="bad-credentials">The username and password you entered didn't match our records.</span>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+          <input type="text" formControlName="username" placeholder="Username" class="text-input login-form-input"/>
+          <input type="password" formControlName="password" placeholder="Password" class="text-input login-form-input"/>
+          <input type="submit" value="Log in" class="btn btn-outlined login-form-btn login-form-input"/>
+        </form>
+      </div>
+      <div class="signup">
+        <app-profile-editor-modal *ngIf="this.modalService.profileEditorModalOpen" [inRegistration]="true"></app-profile-editor-modal>
+        <div class="signup-header">
+          <svg class="twitter-icon-small" id="Logo_FIXED" data-name="Logo — FIXED" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+          <defs><style>.cls-1{fill:none;}.cls-2{fill:#1da1f2;}</style></defs><title>Twitter_Logo_Blue</title><rect class="cls-1" width="400" height="400"/><path class="cls-2" d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23"/>
+        </svg>
+        </div>
+        <h1 class="signup-flavour-text">See what's happening in the world right now</h1>
+        <h2 class="signup-flavour-text-small">We're not really twitter.</h2>
+        <div class="signup-buttons">
+          <button (click)="openRegistration()" class="btn btn-filled signup-btn">Sign up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="logged-out-homepage-footer">
+    <ul class="footer-list">
+      <li class="footer-list-item"><a href="https://github.com/ahmednur">My GitHub</a></li>
+      <li class="footer-list-item">A Bunch</li>
+      <li class="footer-list-item">Of</li>
+      <li class="footer-list-item">List Items</li>
+      <li class="footer-list-item">In The</li>
+      <li class="footer-list-item">Footer</li>
+      <li class="footer-list-item">Because</li>
+      <li class="footer-list-item">Real</li>
+      <li class="footer-list-item">Twitter</li>
+      <li class="footer-list-item">Has Them</li>
+      <li class="footer-list-item">Lorem</li>
+      <li class="footer-list-item">Ipsum</li>
+      <li class="footer-list-item">Something</li>
+      <li class="footer-list-item">Or Other</li>
+    </ul>
+  </div>
+</div>

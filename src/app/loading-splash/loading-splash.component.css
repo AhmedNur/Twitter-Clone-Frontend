@@ -1,0 +1,13 @@
+.loading-splash{
+  height:100%;
+  width:100%;
+  position:absolute;
+  background-color:#fff;
+  z-index:3;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.twitter-icon-small{
+  height:125px;
+}

@@ -1,0 +1,36 @@
+.homepage{
+  display:flex;
+  flex-direction:row;
+  min-height:100%;
+}
+.main{
+  display:flex;
+  flex-direction: column;
+  max-width:600px;
+  width:100%;
+}
+.nav{
+  flex-grow:0.44;
+  border-right:1px solid #e6ecf0;
+  min-height: 100%;
+}
+.spacer{
+  flex-grow:1;
+  border-left:1px solid #e6ecf0;
+  min-height: 100%;
+}
+@media(max-width: 885px){
+  .homepage{
+    flex-direction: column;
+  }
+  .main{
+    max-width: none;
+  }
+  .nav{
+    flex-grow:0;
+    z-index: 100;
+  }
+  .spacer{
+    display:none;
+  }
+}

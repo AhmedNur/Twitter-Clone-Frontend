@@ -1,0 +1,4 @@
+<ul id="timeline">
+  <li *ngFor="let tweet of newTweets" class="timeline-item"><app-tweet *ngIf="!(this.tag) || this.tag == this.auth.userDetails.getValue().tag"  [tweet]="tweet"></app-tweet></li>
+  <li *ngFor="let tweet of tweets" class="timeline-item"><app-tweet [tweet]="tweet"></app-tweet></li>
+</ul>
