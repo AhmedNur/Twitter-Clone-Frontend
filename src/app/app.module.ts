@@ -54,4 +54,5 @@ import {ProfileEditorModalComponent} from './profile-editor-modal/profile-editor
   providers: [CookieService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -1,27 +1,29 @@
-# TwitterCloneFrontend
+# TwitterClone Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.
+A simple webapp that copies twitter's look and basic functionality. This angular app works together with a [spring backend](https://github.com/AhmedNur/Twitter-Clone).
 
-## Development server
+## Demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+[Try it out!](https://twitter.ahmednur.me)
 
-## Code scaffolding
+## Features
+* Session based authentication
+* CRUD
+* Lazy loading tweets for infinite scrolling
+* Liking
+* Retweeting
+* Replying
+* Following Users
+* Changing user display name, tag and bio
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## To Do
+* Switch from session based authentication to JWT
+* Profile Pictures & Headers
+* Attached Images
+* Trending posts
+* Search
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* Ensure that the backend's properties file located in src/main/resources/application.propeties is filled out to authenticate against your MySQL database.
+* Start the spring application and open your browser to http://localhost:8080
