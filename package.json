@@ -23,7 +23,7 @@
     "@angular/router": "^14.0.4",
     "hammerjs": "^2.0.8",
     "ngx-cookie-service": "^14.0.1",
-    "npm-check-updates": "^14.1.1",
+    "npm-check-updates": "^16.7.4",
     "rxjs": "~7.5.5",
     "tslib": "^2.4.0",
     "zone.js": "~0.11.6"
